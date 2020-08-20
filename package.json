@@ -1,0 +1,14 @@
+{
+  "name": "meu-portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/main.scss -o  dist/css/ --recursive"
+  },
+  "author": "Rafael Kleimpaul Parente Bueno",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
