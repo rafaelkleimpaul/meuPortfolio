@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 
 *{
     box-sizing: border-box;
@@ -21,8 +22,6 @@
     font-family: Raleway-Semibolt;
     src: url(/fonts/Raleway-SemiBoldItalic.ttf);
 }
-
-
 
 body{
     @include backgorund();
@@ -62,6 +61,8 @@ header {
     z-index: 2;
     //z index eh a posicao em que a tag selecionada ira ficar (mais proximo ou mais distante do usuario)
     width: 100%;
+
+    
 }
 
 .text-secondary{
@@ -93,3 +94,4 @@ main {
     }
 }
 
+// Menu button
