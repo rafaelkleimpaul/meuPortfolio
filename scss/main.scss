@@ -1,6 +1,95 @@
-$primary-color: #444;
+@import 'config';
+
+*{
+    box-sizing: border-box;
+}
+
+//Medium
+@font-face{
+    font-family: Raleway-Medium;
+    src: url(/fonts/Raleway-Medium.ttf);
+}
+
+//Regular
+@font-face{
+    font-family: Raleway-Regular;
+    src: url(/fonts/Raleway-Regular.ttf);
+}
+
+//Semi Bolt
+@font-face{
+    font-family: Raleway-Semibolt;
+    src: url(/fonts/Raleway-SemiBoldItalic.ttf);
+}
+
+
 
 body{
+    @include backgorund();
     background: $primary-color;
     color: #fff;
+    height: 100%;
+    margin : 0;
+    font-family: Raleway-Medium;
+    line-height: 1.5;
 }
+
+//Headings
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2),0.5)
+        //lighten usa o parametro $primary-color (cor do background da pag) e adiciona um "brilho" (2)
+        //se colocarmos rgba (),value esse value representa a opacidade
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    //z index eh a posicao em que a tag selecionada ira ficar (mais proximo ou mais distante do usuario)
+    width: 100%;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
+
